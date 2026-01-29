@@ -46,14 +46,6 @@ Visit these pages with **real backend data**:
 - **Vulnerability**: http://localhost:5173/vulnerability
 - **API Test Page**: http://localhost:5173/api-demo
 
-## 📚 Documentation
-
-| Document | Purpose |
-|----------|---------|
-| **[API_REFERENCE.md](API_REFERENCE.md)** | 📖 API endpoints and usage |
-| **[QUICKSTART.md](QUICKSTART.md)** | 🚀 Get started in 10 minutes |
-| **[ARCHITECTURE.md](ARCHITECTURE.md)** | 🏗️ System design & diagrams |
-| **[INTEGRATION_README.md](INTEGRATION_README.md)** | 📘 Complete integration guide |
 
 ## 🛠️ Technology Stack
 
