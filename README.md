@@ -39,14 +39,6 @@ npm run dev
 - 📊 **Scholarship Analysis** - ML-based participation insights
 - 💰 **Scheme Eligibility** - Dynamic eligibility checking
 
-## 🎯 Live Demo
-
-Visit these pages with **real backend data**:
-- **Welfare Gap**: http://localhost:5173/welfare-gap
-- **Vulnerability**: http://localhost:5173/vulnerability
-- **API Test Page**: http://localhost:5173/api-demo
-
-
 ## 🛠️ Technology Stack
 
 ### Backend
