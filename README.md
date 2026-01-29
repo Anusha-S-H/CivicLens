@@ -50,9 +50,8 @@ Visit these pages with **real backend data**:
 
 | Document | Purpose |
 |----------|---------|
-| **[DOCS_INDEX.md](DOCS_INDEX.md)** | 📖 Main documentation hub |
+| **[API_REFERENCE.md](API_REFERENCE.md)** | 📖 API endpoints and usage |
 | **[QUICKSTART.md](QUICKSTART.md)** | 🚀 Get started in 10 minutes |
-| **[CONNECTION_SUMMARY.md](CONNECTION_SUMMARY.md)** | 🔗 What was built & how |
 | **[ARCHITECTURE.md](ARCHITECTURE.md)** | 🏗️ System design & diagrams |
 | **[INTEGRATION_README.md](INTEGRATION_README.md)** | 📘 Complete integration guide |
 
