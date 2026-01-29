@@ -1,0 +1,232 @@
+[
+  {
+    "id": "PM_KISAN",
+    "name": "PM-KISAN Samman Nidhi",
+    "description": "Income support of ₹6,000 per year to eligible farmers through Direct Benefit Transfer.", 
+    "eligibility": [
+      "Must be a farmer",
+      "Must own agricultural land",
+      "Must not pay income tax"
+    ],
+    "not_eligible": [
+      "Income tax payers",
+      "Government employees"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Land ownership records (RTC / Patta)",
+      "Bank passbook"
+    ],
+    "apply_steps": [
+      "Apply online on the PM-KISAN portal or at CSC",
+      "Submit documents",
+      "Verification by officials",
+      "Benefit transferred via bank"
+    ]
+  },
+  {
+    "id": "MGNREGA",
+    "name": "MGNREGA",
+    "description": "Provides up to 100 days of paid manual work annually for rural households.",
+    "eligibility": [
+      "Must be 18 years or older",
+      "Must live in a rural area",
+      "Willing to do manual work"
+    ],
+    "not_eligible": [
+      "Urban residents",
+      "People below 18"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Job Card",
+      "Bank account"
+    ],
+    "apply_steps": [
+      "Apply at Gram Panchayat",
+      "Get Job Card",
+      "Request work",
+      "Receive payment"
+    ]
+  },
+  {
+    "id": "PMAY",
+    "name": "Pradhan Mantri Awas Yojana (PMAY)",
+    "description": "Affordable housing support with credit-linked subsidy for low and moderate income groups.",
+    "eligibility": [
+      "Does not own a pucca house",
+      "Belongs to EWS / LIG / MIG income group"
+    ],
+    "not_eligible": [
+      "Already owns a permanent house",
+      "High-income families"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Income certificate",
+      "Address proof"
+    ],
+    "apply_steps": [
+      "Apply online or local authority portal",
+      "Verification",
+      "Subsidy approval",
+      "Home construction or purchase"
+    ]
+  },
+  {
+    "id": "AYUSHMAN_BHARAT",
+    "name": "Ayushman Bharat – PMJAY",
+    "description": "National health insurance providing up to ₹5 lakh per family per year for hospitalisation.", 
+    "eligibility": [
+      "Families identified in SECC 2011",
+      "Economically vulnerable households"
+    ],
+    "not_eligible": [
+      "Families not in SECC list",
+      "Cosmetic treatments / OPD"
+    ],
+    "documents": [
+      "Ayushman Bharat card",
+      "Aadhaar Card",
+      "Ration card"
+    ],
+    "apply_steps": [
+      "Check eligibility at authorized center or online",
+      "Generate Ayushman card",
+      "Get cashless treatment at empaneled hospitals"
+    ]
+  },
+  {
+    "id": "PMJDY",
+    "name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+    "description": "Financial inclusion scheme ensuring access to banking services for all households.", 
+    "eligibility": [
+      "Indian citizen",
+      "Resident of India"
+    ],
+    "not_eligible": [
+      "Non-residents"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Identity proof",
+      "Address proof"
+    ],
+    "apply_steps": [
+      "Visit bank branch or Bank Mitra outlet",
+      "Open PMJDY account (zero balance optional)",
+      "Link Aadhaar and mobile number"
+    ]
+  },
+  {
+    "id": "PMJJBY",
+    "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+    "description": "Life insurance scheme for people aged 18-50 with low premium.",
+    "eligibility": [
+      "Age 18–50",
+      "Has savings bank account"
+    ],
+    "not_eligible": [
+      "Above 50 years",
+      "No bank account"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank account"
+    ],
+    "apply_steps": [
+      "Opt in through bank account",
+      "Annual premium auto-debited",
+      "Claim paid to nominee on event"
+    ]
+  },
+  {
+    "id": "PMSBY",
+    "name": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+    "description": "Accident insurance providing coverage for accidental death and disability.",
+    "eligibility": [
+      "Age 18–70",
+      "Savings bank account"
+    ],
+    "not_eligible": [
+      "No bank account"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank account"
+    ],
+    "apply_steps": [
+      "Opt in through bank account",
+      "Annual premium auto-debited",
+      "Claim via bank/policy if accident occurs"
+    ]
+  },
+  {
+    "id": "UJJWALA",
+    "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+    "description": "Provides free LPG connections to women of BPL households.",
+    "eligibility": [
+      "Woman from BPL family",
+      "No existing LPG connection"
+    ],
+    "not_eligible": [
+      "Already has LPG connection"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Ration card",
+      "Address proof"
+    ],
+    "apply_steps": [
+      "Apply at LPG distributor",
+      "Verification",
+      "Receive gas connection"
+    ]
+  },
+  {
+    "id": "OLD_AGE_PENSION",
+    "name": "Indira Gandhi National Old Age Pension Scheme",
+    "description": "Provides monthly pension to senior citizens below poverty line families.",
+    "eligibility": [
+      "Age 60+",
+      "Belongs to BPL family"
+    ],
+    "not_eligible": [
+      "Age below 60",
+      "High income"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Age proof",
+      "Bank account"
+    ],
+    "apply_steps": [
+      "Apply at Panchayat/office",
+      "Verification",
+      "Pension credited monthly"
+    ]
+  },
+  {
+    "id": "ATAL_PENSION",
+    "name": "Atal Pension Yojana (APY)",
+    "description": "Pension scheme for unorganized sector workers with guaranteed monthly pension.",
+    "eligibility": [
+      "Indian citizen",
+      "Age 18–40",
+      "Has savings account"
+    ],
+    "not_eligible": [
+      "Age above 40 at entry",
+      "No bank account"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank account"
+    ],
+    "apply_steps": [
+      "Enroll through bank",
+      "Contribute monthly",
+      "Get guaranteed pension after 60"
+    ]
+  }
+]
