@@ -1,222 +1,236 @@
-# 🏛️ CivicLens - Integrated Platform
+CivicLens
 
-> Connecting civic services data analysis with modern web interface
+CivicLens is a full-stack civic data analysis project that combines a Flask-based backend with a React + TypeScript frontend.
+The project focuses on analyzing government welfare schemes, district-level vulnerabilities, and civic issues using structured datasets and basic machine learning techniques.
 
-CivicLens is now a fully integrated platform with a Python Flask backend connected to a React TypeScript frontend. Analyze welfare schemes, detect civic issues, and understand district vulnerabilities - all with real-time data!
+This repository contains working analysis scripts, APIs, and a frontend UI built around real CSV and JSON data.
 
-## 🚀 Quick Start
+What This Project Does
 
-### Windows Users (Easiest!)
-1. **Double-click** `start-all.bat` to start both servers
-2. **Open browser** to http://localhost:5173
-3. **Visit demo** at http://localhost:5173/api-demo
+CivicLens helps analyze:
 
-### Manual Start
-```bash
-# Terminal 1 - Backend
+Welfare scheme coverage across districts
+
+Employment and scholarship participation anomalies
+
+District vulnerability indicators
+
+Civic issues reported through text and news data
+
+The backend exposes APIs for these analyses, and the frontend consumes them to display results interactively.
+
+Repository Structure
+CivicLens-main/
+├── be/                         # Backend (Flask + ML logic)
+│   ├── api_server.py           # Main Flask API server
+│   ├── db.py                   # Database / data handling logic
+│   ├── analysis.py             # Common analysis utilities
+│   ├── welfare_gap_index.py    # Welfare gap computation
+│   ├── district_vulnerability_profile.py
+│   ├── analysis_mgnrega.py     # MGNREGA analysis
+│   ├── analysis_scholarship.py # Scholarship analysis
+│   ├── scheme_eligibility.py   # Eligibility checks
+│   ├── scheme_explainer.py     # Scheme explanation logic
+│   ├── civic_issue_classifier.py
+│   ├── civic_alert_with_image.py
+│   ├── requirements.txt
+│   ├── .env.example
+│   └── README.md
+│
+├── data/                       # Datasets used by backend
+│   ├── central_schemes.json
+│   ├── civic_reports.json
+│   ├── district_population.csv
+│   ├── district_scheme_data.csv
+│   ├── district_vulnerability_data.csv
+│   ├── karnataka_district_population_clean.csv
+│   ├── karnataka_mgnrega_district.csv
+│   ├── pm_kisan_district.csv
+│   └── tn_scholarship_district.csv
+│
+├── fe/                         # Frontend (React + TypeScript)
+│   └── (Vite + React app)
+│
+├── .gitignore
+└── README.md
+
+Backend Overview
+
+The backend is written in Python using Flask and is responsible for:
+
+Loading district-level CSV/JSON datasets
+
+Performing welfare gap calculations
+
+Generating vulnerability profiles
+
+Running scheme participation analysis
+
+Classifying civic issues using ML models
+
+Exposing all functionality via REST APIs
+
+Key Backend Features
+
+Welfare Gap Index calculation
+
+District vulnerability profiling
+
+MGNREGA employment anomaly detection
+
+Scholarship participation analysis
+
+Scheme eligibility checking
+
+Civic issue text classification
+
+Civic alert generation using news data
+
+Frontend Overview
+
+The frontend is built using:
+
+React
+
+TypeScript
+
+Vite
+
+It provides:
+
+API-driven dashboards
+
+District selection and filtering
+
+Display of analysis results
+
+Simple UI for testing civic issue classification and alerts
+
+Running the Project
+Backend Setup
 cd be
 pip install -r requirements.txt
 python api_server.py
 
-# Terminal 2 - Frontend  
+
+Backend runs on:
+
+http://localhost:5000
+
+Frontend Setup
 cd fe
 npm install
 npm run dev
-```
 
-**Then visit**: http://localhost:5173
 
-## ✨ What's New - Backend Connected! ✅
+Frontend runs on:
 
-### Fully Integrated Features
-- ✅ **Welfare Gap Index** - Real district-level scheme analysis
-- ✅ **District Vulnerability** - Live vulnerability profiles
-- ✅ **Civic Alert Engine** - News-powered alert system
-- ✅ **Issue Classifier** - AI-powered issue categorization
+http://localhost:5173
 
-### API Ready Features
-- 📊 **MGNREGA Analysis** - Anomaly detection for employment schemes
-- 📊 **Scholarship Analysis** - ML-based participation insights
-- 💰 **Scheme Eligibility** - Dynamic eligibility checking
+Environment Configuration
+Backend
 
-## 🛠️ Technology Stack
+Copy .env.example and configure if needed
 
-### Backend
-- **Flask 3.0** - Web framework
-- **Pandas** - Data analysis
-- **Scikit-learn** - Machine learning
-- **Python 3.11** - Programming language
+Default port: 5000
 
-### Frontend
-- **React 18** - UI framework
-- **TypeScript** - Type safety
-- **Vite** - Build tool
-- **TailwindCSS** - Styling
+Frontend
 
-## 📊 API Endpoints
+Create a .env file inside fe/:
 
-```
-GET  /api/health                    - Health check
-GET  /api/mgnrega-analysis          - MGNREGA data
-GET  /api/scholarship-analysis      - Scholarship data
-POST /api/civic-alert               - Create alert
-POST /api/classify-issue            - Classify text
-GET  /api/welfare-gap?district=X    - Welfare gaps
-GET  /api/vulnerability?district=X  - Vulnerability
-GET  /api/schemes                   - List schemes
-```
+VITE_API_URL=http://localhost:5000/api
 
-Full API documentation: [be/README.md](be/README.md)
+API Endpoints (From api_server.py)
+GET  /api/health
+GET  /api/mgnrega-analysis
+GET  /api/scholarship-analysis
+GET  /api/welfare-gap
+GET  /api/vulnerability
+GET  /api/schemes
+POST /api/classify-issue
+POST /api/civic-alert
 
-## 📁 Project Structure
 
-```
-civicLens/
-├── be/                      # Backend (Python/Flask)
-│   ├── api_server.py       # ⭐ Main API server
-│   ├── requirements.txt    # Python dependencies
-│   └── data/               # CSV/JSON data
-│
-├── fe/                      # Frontend (React/TypeScript)
-│   ├── src/
-│   │   ├── lib/api.ts      # ⭐ API client
-│   │   ├── pages/          # React pages
-│   │   └── components/     # React components
-│   └── .env                # Configuration
-│
-├── start-all.bat           # 🚀 Start both servers
-├── start-backend.bat       # Start backend only
-└── start-frontend.bat      # Start frontend only
-```
+Detailed backend API notes are available in be/README.md.
 
-## 🎨 Features
+Data Sources
 
-### Data Analytics
-- MGNREGA participation anomaly detection
-- Scholarship uptake analysis
-- District-level welfare gap identification
-- Social vulnerability profiling
+All analysis is based on local datasets stored in the data/ folder, including:
 
-### Civic Services
-- Issue classification and routing
-- Alert generation with news scanning
-- Scheme eligibility checking
-- Authority recommendations
+District population data
 
-### Visualizations
-- Interactive district selection
-- Real-time data updates
-- Risk level indicators
-- Coverage metrics
+Scheme participation data
 
-## 🧪 Testing
+MGNREGA and scholarship datasets
 
-### Quick Test
-```bash
-# Check backend health
+Vulnerability indicators
+
+Central and state welfare scheme metadata
+
+No external database is required to run the project.
+
+Testing
+Backend Health Check
 curl http://localhost:5000/api/health
 
-# Test from browser
-http://localhost:5173/api-demo
-```
+Frontend
 
-### Manual Testing
-1. Start both servers
-2. Visit demo page
-3. Try issue classifier
-4. Create civic alert
-5. Check district data
+Open:
 
-## 🔧 Configuration
+http://localhost:5173
 
-### Backend
-- **Port**: 5000 (default)
-- **Config**: `be/api_server.py`
 
-### Frontend  
-- **Port**: 5173 (default)
-- **API URL**: Set in `fe/.env`
-  ```
-  VITE_API_URL=http://localhost:5000/api
-  ```
+Use the UI to:
 
-## 🐛 Troubleshooting
+Select districts
 
-### Backend Issues
-```bash
-# Install dependencies
-pip install -r be/requirements.txt
+View welfare and vulnerability data
 
-# Check Python version
-python --version  # Should be 3.8+
-```
+Test issue classification
 
-### Frontend Issues
-```bash
-# Install dependencies
-cd fe && npm install
+Create civic alerts
 
-# Check Node version
-node --version  # Should be 16+
-```
+Notes for Developers
 
-### Connection Issues
-- Ensure backend is running on port 5000
-- Check `.env` file exists in `fe/`
-- Verify CORS is enabled in backend
-- Check browser console for errors
+Each analysis module is separated into its own Python file
 
-## 📖 Learn More
+APIs are thin wrappers over analysis logic
 
-### For Developers
-- Start with [QUICKSTART.md](QUICKSTART.md)
-- Understand with [ARCHITECTURE.md](ARCHITECTURE.md)
-- Build with [INTEGRATION_README.md](INTEGRATION_README.md)
+Data files can be replaced or extended easily
 
-### For Users
-- Visit the demo page
-- Select districts to see data
-- Try the issue classifier
-- Create civic alerts
+Frontend uses a simple API client for communication
 
-## 🎯 Next Steps
+Future Improvements
 
-### To Integrate More Features
-1. Add route in `be/api_server.py`
-2. Add types in `fe/src/lib/api.ts`
-3. Create/update React components
-4. Test in browser
+Add authentication and roles
 
-### To Deploy
-- Backend: Use gunicorn/waitress
-- Frontend: Build with `npm run build`
-- Configure production URLs
-- Enable HTTPS
+Move from CSV-based storage to a database
 
-## 🤝 Contributing
+Improve ML models and validation
 
-When adding features:
-1. Create API endpoint in backend
-2. Add TypeScript types for responses
-3. Create/update React components
-4. Update documentation
-5. Test thoroughly
+Add charts and richer visualizations
 
-## 📄 License
+Support more states and schemes
 
-[Your License Here]
 
-## 🙏 Acknowledgments
+Summary
 
-- Built with Flask, React, and TypeScript
-- Uses NewsAPI for civic alerts
-- Powered by Pandas and Scikit-learn
+CivicLens is a practical civic-tech project that combines:
 
----
+Data analysis
 
-**Ready to start?** 🚀
-1. Run `start-all.bat` (Windows) or follow manual start above
-2. Open http://localhost:5173
-3. Check [QUICKSTART.md](QUICKSTART.md) for detailed guide
+Machine learning
 
-**Questions?** 📖 See [DOCS_INDEX.md](DOCS_INDEX.md) for all documentation
+REST APIs
+
+Modern frontend development
+
+It is suitable for:
+
+Academic projects
+
+Hackathons
+
+Resume / portfolio demonstrations
+
+Civic data experimentation
