@@ -18,46 +18,7 @@ CivicLens helps answer questions such as:
 The backend processes CSV and JSON data files and exposes REST APIs.  
 The frontend consumes these APIs and displays the results in a simple, interactive UI.
 
----
-
-## Repository Structure
-
-CivicLens-main/
-├── be/ # Backend (Flask)
-│ ├── api_server.py # Main Flask API server
-│ ├── db.py # Data handling utilities
-│ ├── analysis.py # Shared analysis helpers
-│ ├── welfare_gap_index.py # Welfare gap calculation
-│ ├── district_vulnerability_profile.py
-│ ├── analysis_mgnrega.py # MGNREGA analysis
-│ ├── analysis_scholarship.py # Scholarship analysis
-│ ├── scheme_eligibility.py # Scheme eligibility logic
-│ ├── scheme_explainer.py # Scheme explanation logic
-│ ├── civic_issue_classifier.py
-│ ├── civic_alert_with_image.py
-│ ├── requirements.txt
-│ ├── .env.example
-│ └── README.md
-│
-├── data/ # Datasets
-│ ├── central_schemes.json
-│ ├── civic_reports.json
-│ ├── district_population.csv
-│ ├── district_scheme_data.csv
-│ ├── district_vulnerability_data.csv
-│ ├── karnataka_district_population_clean.csv
-│ ├── karnataka_mgnrega_district.csv
-│ ├── pm_kisan_district.csv
-│ └── tn_scholarship_district.csv
-│
-├── fe/ # Frontend (React + TypeScript)
-│ └── (Vite-based React app)
-│
-├── .gitignore
-└── README.md
-
-
----
+----
 
 ## Backend Details
 
